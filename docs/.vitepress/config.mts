@@ -9,6 +9,10 @@ export default defineConfig({
     nav: [
       { text: "Home", link: "/" },
       { text: "Docs", link: "/docs-home" },
+      {
+        text: "Get Started",
+        link: "/getting-started/docker",
+      },
     ],
 
     sidebar: [
@@ -34,6 +38,17 @@ export default defineConfig({
           },
           { text: "Routing Mechanisms", link: "/concepts/routing-mechanisms" },
           { text: "Data Persistence", link: "/concepts/data-persistence" },
+        ],
+      },
+      {
+        text: "Configuration",
+        collapsible: true,
+        items: [
+          {
+            text: "Declarative Config File",
+            link: "/configuration/declare-config-file",
+          },
+          { text: "Environment Variables", link: "/configuration/environment" },
         ],
       },
       {
@@ -64,13 +79,6 @@ export default defineConfig({
           { text: "Route Management", link: "/api/route" },
           { text: "Plugin Management", link: "/api/plugin" },
           { text: "Gateway Configuration", link: "/api/configuration" },
-        ],
-      },
-      {
-        text: "Configuration",
-        collapsible: true,
-        items: [
-          { text: "Environment Variables", link: "/configuration/environment" },
         ],
       },
     ],
