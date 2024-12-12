@@ -22,7 +22,7 @@ export default defineConfig({
         items: [
           { text: "Quick Start with Docker", link: "/getting-started/docker" },
           {
-            text: "Setting Up Sushi Gateway with Postgres",
+            text: "Install Sushi Gateway with Postgres",
             link: "/getting-started/postgres",
           },
         ],
@@ -38,17 +38,19 @@ export default defineConfig({
           },
           { text: "Routing Mechanisms", link: "/concepts/routing-mechanisms" },
           { text: "Data Persistence", link: "/concepts/data-persistence" },
-        ],
-      },
-      {
-        text: "Configuration",
-        collapsed: false,
-        items: [
           {
-            text: "Declarative Config File",
-            link: "/configuration/declare-config-file",
+            text: "Configuration",
+            items: [
+              {
+                text: "Environment Variables",
+                link: "/concepts/configuration/environment",
+              },
+              {
+                text: "Configuration Files",
+                link: "/concepts/configuration/files",
+              },
+            ],
           },
-          { text: "Environment Variables", link: "/configuration/environment" },
         ],
       },
       {

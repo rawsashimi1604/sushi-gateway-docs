@@ -1,85 +1,68 @@
-# Markdown Extension Examples
+# Introduction to Sushi Gateway
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+Welcome to the **Sushi Gateway** documentation! Sushi Gateway is a lightweight, open-source API Gateway designed for modern architectures. Built to deliver high performance, Sushi Gateway provides a modular, secure, and developer-friendly approach to API management.
 
-## Syntax Highlighting
+## What is Sushi Gateway?
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
+Sushi Gateway serves as a **Layer 7 reverse proxy** that simplifies API traffic management by handling:
 
-**Input**
+- **Request Routing**: Route requests to upstream services based on defined configurations.
+- **Security**: Enforce robust security policies, including authentication, authorization, and rate limiting.
+- **Load Balancing**: Efficiently distribute traffic across multiple instances to ensure system reliability.
+- **Extensibility**: Customize and extend the gateway using modular plugins tailored to your specific needs.
 
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-````
+Sushi Gateway is designed for simplicity, flexibility, and high performance, making it an ideal solution for users who want to mordenize their API infrastructure.
 
-**Output**
+## Why Use Sushi Gateway?
 
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
+Modern applications often rely on APIs for communication between services, clients, and third-party integrations. However, managing APIs in complex systems can present several challenges:
 
-## Custom Containers
+- **Security Risks**: APIs can expose sensitive data and operations.
+- **Scaling Issues**: Handling high-traffic scenarios without affecting performance.
+- **Operational Overhead**: Configuring and monitoring APIs across distributed systems.
 
-**Input**
+Sushi Gateway addresses these challenges with:
 
-```md
-::: info
-This is an info box.
-:::
+### Key Features
 
-::: tip
-This is a tip.
-:::
+- **Modular Architecture**
+  - Configure plugins at the global, service, or route level for custom policies.
+- **High Performance**
+  - Built in **Golang**, optimized for concurrency and low latency.
+- **Flexible Deployment**
+  - Supports **stateful (database)** and **stateless (declarative)** modes.
+- **Comprehensive Security**
+  - Includes authentication (JWT, Basic Auth, API Keys), rate limiting, and CORS policies.
+- **Developer-Friendly**
+  - RESTful Admin API and intuitive UI for managing configurations.
 
-::: warning
-This is a warning.
-:::
+## Architecture Overview
 
-::: danger
-This is a dangerous warning.
-:::
+### Components
 
-::: details
-This is a details block.
-:::
-```
+Sushi Gateway comprises two primary components:
 
-**Output**
+1. **Sushi Proxy**
+   - Core component handling request routing, load balancing, and applying plugins.
+2. **Sushi Manager**
+   - Web-based UI for monitoring and managing gateway configurations.
 
-::: info
-This is an info box.
-:::
+### Deployment Modes
 
-::: tip
-This is a tip.
-:::
+- **Stateful Mode**: Leverages PostgreSQL for persistent storage of configurations.
+- **Stateless Mode**: Uses declarative configuration files, ideal for GitOps workflows.
 
-::: warning
-This is a warning.
-:::
+### Supported Platforms
 
-::: danger
-This is a dangerous warning.
-:::
+- Docker
+- Kubernetes via Helm (Coming soon!)
 
-::: details
-This is a details block.
-:::
+## Next Steps
 
-## More
+Ready to dive in? Here’s how to get started:
 
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+1. [Install Sushi Gateway](../getting-started/installation.md): Learn how to set up Sushi Gateway.
+2. [Configure the Gateway](../getting-started/configuration.md): Customize routing, security, and more.
+3. [Explore Plugins](../plugins/overview.md): Extend the gateway with powerful plugins.
+
+For more information, visit the [full documentation](../docs-home.md).
