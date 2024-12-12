@@ -40,6 +40,7 @@ export default defineConfig({
           { text: "Data Persistence", link: "/concepts/data-persistence" },
           {
             text: "Configuration",
+
             items: [
               {
                 text: "Environment Variables",
