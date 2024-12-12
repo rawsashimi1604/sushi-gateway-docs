@@ -31,23 +31,29 @@ export default defineConfig({
         text: "Concepts",
         collapsed: false,
         items: [
-          { text: "What is an API Gateway?", link: "/concepts/api-gateway" },
+          {
+            text: "What is an API Gateway?",
+            link: "/concepts/what-is-api-gateway",
+          },
           {
             text: "Sushi Gateway Architecture",
             link: "/concepts/architecture",
           },
-          { text: "Routing Mechanisms", link: "/concepts/routing-mechanisms" },
-          { text: "Data Persistence", link: "/concepts/data-persistence" },
+          { text: "Routing", link: "/concepts/routing" },
+          {
+            text: "Data Persistence Modes",
+            link: "/concepts/data-persistence",
+          },
           {
             text: "Configuration",
-
+            link: "/concepts/configuration/",
             items: [
               {
                 text: "Environment Variables",
                 link: "/concepts/configuration/environment",
               },
               {
-                text: "Configuration Files",
+                text: "Declarative Configuration File",
                 link: "/concepts/configuration/files",
               },
             ],
@@ -57,10 +63,17 @@ export default defineConfig({
       {
         text: "Plugins",
         collapsed: true,
+        link: "/plugins/",
         items: [
-          { text: "Basic Authentication", link: "/plugins/basic-auth" },
+          {
+            text: "Basic Authentication",
+            link: "/plugins/basic-auth",
+          },
           { text: "JSON Web Token (JWT)", link: "/plugins/jwt" },
-          { text: "API Key Authentication", link: "/plugins/api-key-auth" },
+          {
+            text: "API Key Authentication",
+            link: "/plugins/key-auth",
+          },
           {
             text: "Mutual Transport Layer Security (MTLS)",
             link: "/plugins/mtls",
@@ -68,21 +81,19 @@ export default defineConfig({
           { text: "Bot Protection", link: "/plugins/bot-protection" },
           { text: "CORS", link: "/plugins/cors" },
           { text: "Access Control List", link: "/plugins/acl" },
-          { text: "Rate Limiting", link: "/plugins/rate-limiting" },
-          { text: "Request Size Limit", link: "/plugins/request-size-limit" },
+          { text: "Rate Limiting", link: "/plugins/rate-limit" },
+          {
+            text: "Request Size Limit",
+            link: "/plugins/request-size-limit",
+          },
           { text: "HTTP Log", link: "/plugins/http-log" },
         ],
       },
       {
         text: "Admin REST API",
         collapsed: true,
-        items: [
-          { text: "Authentication Endpoints", link: "/api/authentication" },
-          { text: "Service Management", link: "/api/service" },
-          { text: "Route Management", link: "/api/route" },
-          { text: "Plugin Management", link: "/api/plugin" },
-          { text: "Gateway Configuration", link: "/api/configuration" },
-        ],
+        link: "/api/",
+        items: [{ text: "Endpoints", link: "/api/endpoints" }],
       },
     ],
 
