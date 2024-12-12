@@ -18,7 +18,7 @@ export default defineConfig({
     sidebar: [
       {
         text: "Getting Started",
-        collapsible: true,
+        collapsed: false,
         items: [
           { text: "Quick Start with Docker", link: "/getting-started/docker" },
           {
@@ -29,7 +29,7 @@ export default defineConfig({
       },
       {
         text: "Concepts",
-        collapsible: true,
+        collapsed: false,
         items: [
           { text: "What is an API Gateway?", link: "/concepts/api-gateway" },
           {
@@ -42,7 +42,7 @@ export default defineConfig({
       },
       {
         text: "Configuration",
-        collapsible: true,
+        collapsed: false,
         items: [
           {
             text: "Declarative Config File",
@@ -53,7 +53,7 @@ export default defineConfig({
       },
       {
         text: "Plugins",
-        collapsible: true,
+        collapsed: true,
         items: [
           { text: "Basic Authentication", link: "/plugins/basic-auth" },
           { text: "JSON Web Token (JWT)", link: "/plugins/jwt" },
@@ -72,7 +72,7 @@ export default defineConfig({
       },
       {
         text: "Admin REST API",
-        collapsible: true,
+        collapsed: true,
         items: [
           { text: "Authentication Endpoints", link: "/api/authentication" },
           { text: "Service Management", link: "/api/service" },
