@@ -4,7 +4,11 @@ Welcome to the **Sushi Gateway** documentation! Sushi Gateway is a lightweight, 
 
 ## What is Sushi Gateway?
 
-Sushi Gateway serves as a **Layer 7 reverse proxy** that simplifies API traffic management by handling:
+::: info
+An API Gateway acts as a reverse proxy that sits between clients and backend services, handling tasks such as request routing, security enforcement, and load balancing. For a deeper dive into what an API Gateway is, check out our [What is an API Gateway?](../concepts/api-gateway.md) page.
+:::
+
+Sushi Gateway serves as a **Layer 7 API Gateway** that simplifies API traffic management by handling:
 
 - **Request Routing**: Route requests to upstream services based on defined configurations.
 - **Security**: Enforce robust security policies, including authentication, authorization, and rate limiting.
@@ -43,7 +47,7 @@ Sushi Gateway addresses these challenges with:
 Sushi Gateway comprises two primary components:
 
 1. **Sushi Proxy**
-   - Core component handling request routing, load balancing, and applying plugins.
+   - Core gateway component handling request routing, load balancing, and applying plugins.
 2. **Sushi Manager**
    - Web-based UI for monitoring and managing gateway configurations.
 
