@@ -5,6 +5,9 @@ export default defineConfig({
   title: "Sushi Gateway",
   description: "Lightweight Layer 7 Open Source Gateway",
   themeConfig: {
+    search: {
+      provider: "local",
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
