@@ -1,5 +1,4 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
@@ -10,11 +9,11 @@ hero:
   # TODO: add actions
   actions:
     - theme: brand
-      text: Get Started
-      link: /docs-home
+      text: Quick Start
+      link: /getting-started/docker
     - theme: alt
-      text: View Repository
-      link: https://github.com/rawsashimi1604/sushi-gateway
+      text: View Documentation
+      link: /docs-home
 
 features:
   - icon: "🧩"
