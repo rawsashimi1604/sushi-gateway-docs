@@ -1,10 +1,8 @@
-# Getting Started with Sushi Gateway
+# Quick Start Using Docker
 
 Welcome to the **Getting Started** guide for Sushi Gateway! This guide will help you set up Sushi Gateway quickly using Docker. In just a few steps, you'll have a working API Gateway to manage and secure your APIs.
 
-## Quick Start Using Docker
-
-### Step 0: Install Docker
+## Step 0: Install Docker
 
 ::: tip
 Ensure that Docker is installed and running on your machine. Docker is required to run Sushi Gateway components.
@@ -27,7 +25,7 @@ Docker version 20.10.7, build f0df350
 
 Now you're ready to proceed!
 
-### Step 1: Pull the Sushi Proxy and Manager Images
+## Step 1: Pull the Sushi Proxy and Manager Images
 
 ::: info
 Pull the latest Docker images for Sushi Proxy and Sushi Manager from Docker Hub to get started.
@@ -42,7 +40,7 @@ docker pull rawsashimi/sushi-proxy:latest
 docker pull rawsashimi/sushi-manager:latest
 ```
 
-### Step 2: Create a Configuration File
+## Step 2: Create a Configuration File
 
 ::: info Stateless Mode
 This guide uses the stateless version of Sushi Gateway for simplicity. In this mode, configuration is managed using a declarative JSON file. For understanding the various persistence configuration modes, refer to our [Data Persistence Guide](../concepts/data-persistence.md).
@@ -93,7 +91,7 @@ Create a `config.json` file with the following example configuration:
 Learn more about managing configurations in our [Configuration Management Guide](../concepts/configuration-management.md), including environment variables and JSON files.
 :::
 
-### Step 3: Create a Docker Network
+## Step 3: Create a Docker Network
 
 Set up a Docker network for your services:
 
@@ -101,7 +99,7 @@ Set up a Docker network for your services:
 docker network create sushi-network
 ```
 
-### Step 4: Pull the Example Upstream Service Image
+## Step 4: Pull the Example Upstream Service Image
 
 Pull the example Node.js service image:
 
@@ -109,7 +107,7 @@ Pull the example Node.js service image:
 docker pull rawsashimi/express-sushi-app:latest
 ```
 
-### Step 5: Run the Upstream Service
+## Step 5: Run the Upstream Service
 
 Run the upstream service container with the required environment variables:
 
@@ -128,7 +126,7 @@ docker run -d \
 rawsashimi/express-sushi-app:latest
 ```
 
-### Step 6: Test the Service
+## Step 6: Test the Service
 
 Ensure the upstream service is working:
 
@@ -156,7 +154,7 @@ Expected response:
 }
 ```
 
-### Step 7: Generate Certificates for the Proxy
+## Step 7: Generate Certificates for the Proxy
 
 ::: info
 To secure communications, generate certificates for TLS and MTLS. These certificates are used to validate client and server communications.
@@ -182,7 +180,7 @@ openssl x509 -req -days 365 -in server.csr -CA ca.crt -CAkey ca.key -CAcreateser
 openssl verify -CAfile ca.crt server.crt
 ```
 
-### Step 8: Run the Sushi Proxy
+## Step 8: Run the Sushi Proxy
 
 Launch the Sushi Proxy container with the configuration and certificates:
 
@@ -208,7 +206,7 @@ docker run \
 rawsashimi/sushi-proxy:latest
 ```
 
-### Step 9: Test the Proxy
+## Step 9: Test the Proxy
 
 Verify that the proxy works:
 
@@ -236,7 +234,7 @@ Expected response:
 }
 ```
 
-### Step 10: Run Sushi Manager
+## Step 10: Run Sushi Manager
 
 Launch the interactive UI at http://localhost:5173 via the pulled UI docker image for managing and monitoring your gateway:
 
