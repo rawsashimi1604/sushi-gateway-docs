@@ -4,11 +4,11 @@ An **API Gateway** is a server that manages requests to your APIs. The gateway a
 
 ## Key Features of an API Gateway
 
-- **Request Routing**: Directs incoming requests to the appropriate backend services.
-- **Security**: Enforces policies for authentication, authorization, and rate limiting.
-- **Load Balancing**: Distributes traffic across multiple service instances to improve availability and reliability.
-- **Request/Response Transformation**: Modifies requests and responses as needed, such as converting legacy protocols.
-- **Monitoring and Logging**: Tracks API usage and logs traffic for analytics and troubleshooting.
+- **Request Routing**: Directs incoming requests to the configured backend services.
+- **Security**: Enforces policies or plugins for authentication, authorization, rate limiting and more!
+- **Load Balancing**: Distributes traffic across multiple service instances to improve availability and reliability. This ties into the concept of horizontal scaling.
+- **Request/Response Transformation**: Modifies requests and responses as needed, such as converting legacy protocols like SOAP to REST.
+- **Monitoring and Logging**: Help track API usage and logs traffic for analytics, auditing troubleshooting.
 
 ## Why Use an API Gateway?
 
