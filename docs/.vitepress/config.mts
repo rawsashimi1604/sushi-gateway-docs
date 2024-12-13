@@ -42,6 +42,15 @@ export default defineConfig({
             text: "Sushi Gateway Architecture",
             link: "/concepts/architecture",
           },
+          {
+            text: "Entities",
+            link: "/concepts/entities/",
+            items: [
+              { text: "Services", link: "/concepts/entities/service" },
+              { text: "Route", link: "/concepts/entities/route" },
+              { text: "Plugin", link: "/concepts/entities/plugin" },
+            ],
+          },
           { text: "Routing", link: "/concepts/routing" },
           {
             text: "Data Persistence Modes",
