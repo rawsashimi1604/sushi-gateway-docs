@@ -4,12 +4,15 @@ Routing is a core feature of Sushi Gateway, enabling the efficient handling of i
 
 ## How Routing Works
 
-Sushi Gateway's routing mechanism operates based on:
+Routing in Sushi Gateway ensures that requests are directed to the appropriate backend services based on predefined rules.
 
-1. **Route Matching**: Requests are matched against predefined routes using criteria like paths, HTTP methods, and host headers.
-2. **Upstream Services**: Each route is associated with one or more upstream services where the traffic is forwarded.
-3. **Load Balancing**: If multiple upstream instances exist, Sushi Gateway applies the configured load-balancing strategy.
-4. **Plugins**: Route-specific plugins can modify requests, enforce policies, or transform responses.
+### Route Matching
+
+Routes are matched using the following criteria:
+
+- **Path**: The URL path specified in the route.
+- **HTTP Methods**: Supported methods such as GET, POST, etc.
+- **Headers**: Optional headers for advanced matching.
 
 ## Defining Services
 
@@ -84,27 +87,15 @@ Here’s an example of a complete service definition in `config.json`:
    - Define specific API paths and methods handled by the service.
    - Include optional plugins for additional processing.
 
-## How Routing Works
-
-Routing in Sushi Gateway ensures that requests are directed to the appropriate backend services based on predefined rules.
-
-### Route Matching
-
-Routes are matched using the following criteria:
-
-- **Path**: The URL path specified in the route.
-- **HTTP Methods**: Supported methods such as GET, POST, etc.
-- **Headers**: Optional headers for advanced matching.
-
 ### Load Balancing
 
 Once a route is matched, Sushi Gateway uses the defined load-balancing strategy to distribute traffic to the upstreams.
 
-| Strategy              | Description                                                          |
-| --------------------- | -------------------------------------------------------------------- |
-| **Round Robin**       | Distributes requests sequentially among upstreams.                   |
-| **Least Connections** | Directs requests to the upstream with the fewest active connections. |
-| **Weighted**          | Assigns weights to upstreams for proportionate traffic distribution. |
+| Strategy        | Description                                                                |
+| --------------- | -------------------------------------------------------------------------- |
+| **Round Robin** | Distributes requests sequentially among upstreams.                         |
+| **IP Hash**     | (WIP) Directs requests to the upstream based on IP Hash (sticky session).  |
+| **Weighted**    | (WIP) Assigns weights to upstreams for proportionate traffic distribution. |
 
 Set the strategy in the service configuration:
 
