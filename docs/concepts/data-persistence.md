@@ -54,11 +54,3 @@ DB_CONNECTION_PASS=<database_password>
 ::: tip
 For step-by-step instructions on setting up Sushi Gateway with PostgreSQL, see the **[Installation Guide](../installation/install-with-postgres.md)**.
 :::
-
-## Comparison of Persistence Modes
-
-| Feature                | Stateless Mode          | Stateful Mode           |
-| ---------------------- | ----------------------- | ----------------------- |
-| Configuration Storage  | File-based (e.g., JSON) | Database-based          |
-| Dynamic Updates        | No                      | Yes                     |
-| Database Sync Interval | N/A                     | Configurable (e.g., 5s) |
