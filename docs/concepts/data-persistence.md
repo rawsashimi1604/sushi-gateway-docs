@@ -9,32 +9,21 @@ In Stateless Mode, configurations are provided as declarative files, such as `co
 - Testing and development environments.
 - Scenarios with fixed configurations that do not require frequent updates.
 
-To configure Stateless Mode, set the following environment variable:
-
-::: tip
-For a full reference of configuration options and environment variables, see the **[Configuration Reference Guide](../reference/configuration.md)**.
-:::
+To configure Stateless Mode, set the following environment variable (`PERSISTENCE_CONFIG` will be set to `dbless` by default if not provided):
 
 ```bash
 PERSISTENCE_CONFIG=dbless
 ```
+
+::: tip
+For step-by-step instructions on setting up Sushi Gateway in Stateless Mode, see the **[Quick Start with Docker Guide](../quick-start/docker.md)**.
+:::
 
 ### Key Features
 
 - Simple setup with configuration files.
 - Lightweight and fast.
 - GitOps-friendly workflows for managing version-controlled configurations.
-
-Example:
-
-```bash
-docker run \
-  --rm \
-  -v $(pwd)/config.json:/app/config.json \
-  -e CONFIG_FILE_PATH=/app/config.json \
-  -e PERSISTENCE_CONFIG=dbless \
-  rawsashimi/sushi-proxy:latest
-```
 
 ## Stateful Mode
 
@@ -62,33 +51,9 @@ DB_CONNECTION_PASS=<database_password>
 
 - **`PERSISTENCE_SYNC_INTERVAL`**: Specifies how often (in seconds) the database should sync with the in-memory configuration.
 
-### Example Configuration for PostgreSQL
-
-```bash
-docker run \
-  --rm \
-  -e PERSISTENCE_CONFIG=database \
-  -e PERSISTENCE_SYNC_INTERVAL=5 \
-  -e DB_CONNECTION_HOST=localhost \
-  -e DB_CONNECTION_PORT=5432 \
-  -e DB_CONNECTION_NAME=sushi \
-  -e DB_CONNECTION_USER=postgres \
-  -e DB_CONNECTION_PASS=mysecretpassword \
-  rawsashimi/sushi-proxy:latest
-```
-
-### Key Features
-
-- Persistent storage of configurations.
-- Support for dynamic updates without restarting the gateway.
-- Ensures resilience in distributed environments.
-
-## Switching Between Modes
-
-To switch between Stateless and Stateful modes, update the `PERSISTENCE_CONFIG` environment variable:
-
-- Use `dbless` for Stateless Mode.
-- Use `db` for Stateful Mode with the required database connection variables.
+::: tip
+For step-by-step instructions on setting up Sushi Gateway with PostgreSQL, see the **[Installation Guide](../installation/install-with-postgres.md)**.
+:::
 
 ## Comparison of Persistence Modes
 
@@ -97,4 +62,3 @@ To switch between Stateless and Stateful modes, update the `PERSISTENCE_CONFIG` 
 | Configuration Storage  | File-based (e.g., JSON) | Database-based          |
 | Dynamic Updates        | No                      | Yes                     |
 | Database Sync Interval | N/A                     | Configurable (e.g., 5s) |
-| Setup Complexity       | Low                     | Medium                  |
