@@ -6,15 +6,15 @@ A **Service** in Sushi Gateway represents a backend application or a collection 
 
 A Service configuration consists of the following fields:
 
-| Field                     | Type                                | Description                                                                                              |
-| ------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `name`                    | String                              | A unique identifier for the service.                                                                     |
-| `base_path`               | String                              | The base path for routing requests to this service.                                                      |
-| `protocol`                | String                              | The communication protocol to use (`http` or `https`).                                                   |
-| `load_balancing_strategy` | String                              | Determines how traffic is distributed across upstreams (`round_robin`, `least_connections`, `weighted`). |
-| `upstreams`               | [Upstream](../models/upstream.md)[] | A list of upstream instances for this service.                                                           |
-| `routes`                  | [Route](../models/route.md)[]       | A list of routes associated with the service.                                                            |
-| `plugins`                 | [Plugin](../models/plugin.md)[]     | A list of plugins applied to the service.                                                                |
+| Field                     | Type                                  | Description                                                                                              |
+| ------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `name`                    | String                                | A unique identifier for the service.                                                                     |
+| `base_path`               | String                                | The base path for routing requests to this service.                                                      |
+| `protocol`                | String                                | The communication protocol to use (`http` or `https`).                                                   |
+| `load_balancing_strategy` | String                                | Determines how traffic is distributed across upstreams (`round_robin`, `least_connections`, `weighted`). |
+| `upstreams`               | [Upstream](../entities/upstream.md)[] | A list of upstream instances for this service.                                                           |
+| `routes`                  | [Route](../entities/route.md)[]       | A list of routes associated with the service.                                                            |
+| `plugins`                 | [Plugin](../entities/plugin.md)[]     | A list of plugins applied to the service.                                                                |
 
 ## Example Configuration
 
@@ -137,6 +137,6 @@ Here’s an example of a complete service definition in `config.json`:
 
 The Service entity forms the foundation for managing API traffic in Sushi Gateway. To understand related entities, see:
 
-- **[Route](../models/route.md)**
-- **[Upstream](../models/upstream.md)**
-- **[Plugin](../models/plugin.md)**
+- **[Route](../entities/route.md)**
+- **[Upstream](../entities/upstream.md)**
+- **[Plugin](../entities/plugin.md)**
