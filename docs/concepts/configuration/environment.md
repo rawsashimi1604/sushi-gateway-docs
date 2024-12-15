@@ -29,7 +29,7 @@ Here’s an example of using environment variables to configure Sushi Gateway in
 ```bash
 docker run \
   --rm \
-  -e PERSISTENCE_CONFIG=database \
+  -e PERSISTENCE_CONFIG=db \
   -e PERSISTENCE_SYNC_INTERVAL=5 \
   -e DB_CONNECTION_HOST=localhost \
   -e DB_CONNECTION_PORT=5432 \
