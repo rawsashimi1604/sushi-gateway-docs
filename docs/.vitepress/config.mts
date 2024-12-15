@@ -46,7 +46,8 @@ export default defineConfig({
             text: "Entities",
             link: "/concepts/entities/",
             items: [
-              { text: "Services", link: "/concepts/entities/service" },
+              { text: "Service", link: "/concepts/entities/service" },
+              { text: "Upstream", link: "/concepts/entities/upstream" },
               { text: "Route", link: "/concepts/entities/route" },
               { text: "Plugin", link: "/concepts/entities/plugin" },
             ],
