@@ -53,6 +53,7 @@ export default defineConfig({
             ],
           },
           { text: "Routing", link: "/concepts/routing" },
+          { text: "Load Balancing", link: "/concepts/load-balancing" },
           {
             text: "Data Persistence Modes",
             link: "/concepts/data-persistence",
