@@ -20,7 +20,7 @@ docker --version
 You should see output similar to:
 
 ```bash
-Docker version 20.10.7, build f0df350
+Docker version 24.0.5, build ced0996
 ```
 
 Now you're ready to proceed!

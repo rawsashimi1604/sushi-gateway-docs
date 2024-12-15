@@ -35,7 +35,7 @@ Stateful Mode leverages a database to persist configurations and runtime data. T
 
 ### Database Connection Configuration
 
-For Stateful Mode, you need to specify database connection settings and additional options using environment variables. Sushi Gateway supports databases like PostgreSQL and MySQL.
+For Stateful Mode, you need to specify database connection settings and additional options using environment variables. Sushi Gateway supports PostgreSQL.
 
 Set the following environment variables:
 
