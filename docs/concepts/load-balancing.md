@@ -56,18 +56,3 @@ The appropriate load balancing strategy depends on your use case:
 | Round Robin | Uniform upstreams with similar capabilities.               |
 | Weighted    | Upstreams with varying capacity or priorities.             |
 | IP Hash     | Scenarios requiring session persistence (sticky sessions). |
-
-## Advanced Features
-
-### Dynamic Updates
-
-- Update load balancing configurations dynamically via the Admin API.
-- No need to restart the gateway.
-
-### Integration with Plugins
-
-- Combine load balancing with plugins like rate limiting and authentication for enhanced traffic control.
-
-::: tip
-For detailed configuration examples, see the **[Service Documentation](../entities/service.md)**.
-:::
