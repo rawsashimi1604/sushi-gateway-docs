@@ -1,6 +1,6 @@
 # Bot Protection Plugin
 
-The Bot Protection (`bot_protection`) plugin in Sushi Gateway helps safeguard your APIs by blocking requests based on User Agent strings in the HTTP headers. This plugin is ideal for filtering out traffic from known bots or restricting access to specific clients.
+The Bot Protection (`bot_protection`) plugin helps safeguard your APIs by blocking requests based on User Agent strings in the HTTP headers. This plugin is ideal for filtering out traffic from known bots or restricting access to specific clients.
 
 ## How It Works
 

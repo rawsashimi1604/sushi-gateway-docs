@@ -1,6 +1,6 @@
 # Rate Limiting Plugin
 
-The Rate Limiting plugin is used to control the number of API requests a client can make over a specified period. This ensures fair usage, protects upstream services from excessive load, and enhances security.
+The Rate Limiting (`rate_limit`) plugin is used to control the number of API requests a client can make over a specified period. This ensures fair usage, protects upstream services from excessive load, and enhances security.
 
 ## How It Works
 
