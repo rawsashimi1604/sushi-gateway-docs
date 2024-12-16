@@ -49,16 +49,16 @@ Sushi Gateway supports several plugins. Currently, there are **10 plugins** avai
 
 | Plugin Name          | Description                                               | Documentation                                                 |
 | -------------------- | --------------------------------------------------------- | ------------------------------------------------------------- |
-| `bot_protection`     | Protects against automated bots.                          | [Bot Protection Plugin](../plugins/bot_protection.md)         |
+| `bot_protection`     | Protects against automated bots.                          | [Bot Protection Plugin](../plugins/bot-protection.md)         |
 | `cors`               | Manages CORS policies for APIs.                           | [CORS Plugin](../plugins/cors.md)                             |
 | `mtls`               | Implements mutual TLS authentication.                     | [mTLS Plugin](../plugins/mtls.md)                             |
 | `jwt`                | Validates JSON Web Tokens (JWT).                          | [JWT Plugin](../plugins/jwt.md)                               |
-| `key_auth`           | Secures APIs using API Key Authentication.                | [API Key Plugin](../plugins/api_key.md)                       |
-| `basic_auth`         | Secures routes with basic authentication.                 | [Basic Auth Plugin](../plugins/basic_auth.md)                 |
-| `request_size_limit` | Limits the size of incoming requests.                     | [Request Size Limit Plugin](../plugins/request_size_limit.md) |
+| `key_auth`           | Secures APIs using API Key Authentication.                | [API Key Plugin](../plugins/key-auth.md)                      |
+| `basic_auth`         | Secures routes with basic authentication.                 | [Basic Auth Plugin](../plugins/basic-auth.md)                 |
+| `request_size_limit` | Limits the size of incoming requests.                     | [Request Size Limit Plugin](../plugins/request-size-limit.md) |
 | `acl`                | Manages access control lists for API consumers.           | [Access Control List Plugin](../plugins/acl.md)               |
-| `rate_limit`         | Controls request rates for clients.                       | [Rate Limiting Plugin](../plugins/rate_limit.md)              |
-| `http_log`           | Logs HTTP requests and responses for monitoring purposes. | [HTTP Log Plugin](../plugins/http_log.md)                     |
+| `rate_limit`         | Controls request rates for clients.                       | [Rate Limiting Plugin](../plugins/rate-limit.md)              |
+| `http_log`           | Logs HTTP requests and responses for monitoring purposes. | [HTTP Log Plugin](../plugins/http-log.md)                     |
 
 ::: tip
 Click on a plugin name to learn more about its configuration and use cases.
