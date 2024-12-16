@@ -110,12 +110,8 @@ Combine with other plugins like Rate Limiting for layered protection.
 Monitor blocked requests using logs or analytics to fine-tune your configuration.
 :::
 
-## Warning
-
 ::: warning
 This plugin provides basic filtering and may not prevent sophisticated attacks. Combine it with authentication and IP-based restrictions for robust security.
 :::
 
----
-
-The Bot Protection plugin is a straightforward tool for managing access based on User Agent strings. For more plugins, visit the **[Plugins Overview](../plugins/overview.md)**.
+For more plugins, visit the **[Plugins Overview](../plugins/overview.md)**.
