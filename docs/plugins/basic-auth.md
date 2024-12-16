@@ -1,6 +1,6 @@
 # Basic Authentication Plugin
 
-The Basic Authentication plugin in Sushi Gateway secures APIs by requiring users to provide a username and password. This plugin is compliant with **[RFC 7617](https://datatracker.ietf.org/doc/html/rfc7617)** and ensures that only authorized users can access your services.
+The Basic Authentication (`basic_auth`) plugin secures APIs by requiring users to provide a username and password. This plugin is compliant with **[RFC 7617](https://datatracker.ietf.org/doc/html/rfc7617)** and ensures that only authorized users can access your services.
 
 ## How It Works
 
